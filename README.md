@@ -1,5 +1,5 @@
-README
-Overview
+#README
+##Overview
 This project provides a pipeline for emotion classification using a fine-tuned BERT model. The model can classify text data into specific emotional categories (e.g., Anger, Joy, Sadness, etc.) by leveraging pre-trained language representations from BERT and fine-tuning them on a labeled dataset.
 
 Requirements
