@@ -18,6 +18,55 @@ pip install torch transformers pandas scikit-learn
 ```
 *Note: If you have a GPU, make sure to install the GPU-optimized version of PyTorch to speed up training and inference.
 
+## Dataset
+1. Original Dataset for Fine-tuning (Given in the paper): `Fig_Lan_Annotation.csv` (contains 1662 Figurative sentence example)
+2. Augmented Dataset for Fine-tuning (Using ChatGPT): `data.csv` (contains 9976 Figurative sentence example)
+3. Github Emotion dataset: `github-train.csv` for training and `github-test.csv` for validation.
+4. Incivility Dataset: `incivility-train-data.csv` for training and `incivility-test-data.csv` for validation
+
+
+## Fine Tuning Model
+### Fine Tuning Bert Model
+- Use the following command to fine tune Bert Model with the dataset `Fig_Lan_Annotation.csv`.
+```bash
+python 1_fine_tune_bert.py \
+--epoch 2 \
+--data Fig_Lan_Annotation.csv \
+--output 2_test
+```
+
+*Note: `--epoch` argument for the number of epochs, `--data` for path of the dataset and `--output` for the path where the fine-tuned model will be stored
+
+- Use the following command to fine tune Bert Model with the dataset `data.csv`.
+```bash
+python 1_fine_tune_bert.py \
+--epoch 2 \
+--data data.csv \
+--output 2_test
+```
+*Note: `--epoch` argument for the number of epochs, `--data` for path of the dataset and `--output` for the path where the fine-tuned model will be stored
+
+### Fine Tuning CodeBert Model
+- Use the following command to fine tune CodeBert Model with the dataset `Fig_Lan_Annotation.csv`.
+```bash
+python 2_fine_tune_codebert.py.py \
+--epoch 2 \
+--data Fig_Lan_Annotation.csv \
+--output 2_test
+```
+
+*Note: `--epoch` arguments for the number of epochs, `--data` for path of the dataset and `--output` for the path where the fine-tuned model will be stored
+
+- Use the following command to fine tune CodeBert Model with the dataset `data.csv`.
+```bash
+python 2_fine_tune_codebert.py.py \
+--epoch 2 \
+--data data.csv \
+--output 2_test
+```
+*Note: `--epoch` arguments for the number of epochs, `--data` for path of the dataset and `--output` for the path where the fine-tuned model will be stored
+
+
 ## Data Preparation
 You will need a training and a test dataset in CSV format. The CSV files should contain at least the following:
 
