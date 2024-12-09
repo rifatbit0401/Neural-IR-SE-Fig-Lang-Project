@@ -1,6 +1,6 @@
 # README
 ## Overview
-This project provides a pipeline for emotion classification using a fine-tuned BERT model. The model can classify text data into specific emotional categories (e.g., Anger, Joy, Sadness, etc.) by leveraging pre-trained language representations from BERT and fine-tuning them on a labeled dataset.
+This project provides a pipeline for emotion and incivility classification using a fine-tuned BERT and CodeBert model. The model can classify text data into specific emotional categories (e.g., Anger, Joy, Sadness, etc.) and incivility categories (Civil, Uncivil) by leveraging pre-trained language representations from BERT and CodeBERT, and fine-tuning them on labeled datasets.
 
 ## Requirements
 Before running the code, ensure that you have the following packages installed in your Python environment:
