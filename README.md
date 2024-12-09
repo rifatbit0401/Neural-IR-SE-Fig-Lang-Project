@@ -49,7 +49,7 @@ python 1_fine_tune_bert.py \
 ### Fine Tuning CodeBert Model
 - Use the following command to fine tune CodeBert Model with the dataset `Fig_Lan_Annotation.csv`.
 ```bash
-python 2_fine_tune_codebert.py.py \
+python 2_fine_tune_codebert.py \
 --epoch 2 \
 --data Fig_Lan_Annotation.csv \
 --output 2_test
@@ -59,7 +59,7 @@ python 2_fine_tune_codebert.py.py \
 
 - Use the following command to fine tune CodeBert Model with the dataset `data.csv`.
 ```bash
-python 2_fine_tune_codebert.py.py \
+python 2_fine_tune_codebert.py \
 --epoch 2 \
 --data data.csv \
 --output 2_test
@@ -127,6 +127,9 @@ python 1_bert-classification.py \
     --col=Anger
 ```
 
+Note: The following scripts will give you the results for the emotion `Anger`. Please change the value if you want to get the results for other emotions (Joy, Fear, Sadness, Love, Surprise)
+
+
 ### 2. Running the Fine-Tune CodeBert Model
 The main entry point for running the classification is `2_codebert-classification.py`. This script performs the following tasks:
 
@@ -171,6 +174,7 @@ python 2_codebert-classification.py \
     --col=Anger
 ```
 
+*Note: The following scripts will give you the results for the emotion `Anger`. Please change the value if you want to get the results for other emotions (Joy, Fear, Sadness, Love, Surprise)
 
 ## Github Incivility Classification
 ### 1. Running the Fine-Tune Bert Model
@@ -202,8 +206,8 @@ Since fine-tuning takes more time, you can directly use my fine-tuned models. Ru
 python 1_bert-classification.py \
     --epoch 100 \
     --model fine_tuned_bert_less_data \
-    --traindata=github-train.csv \
-    --testdata=github-test.csv \
+    --traindata=incivility-train-data.csv \
+    --testdata=incivility-test-data.csv \
     --col=label
 ```
 
@@ -212,8 +216,8 @@ python 1_bert-classification.py \
 python 1_bert-classification.py \
     --epoch 100 \
     --model fine_tuned_bert \
-    --traindata=github-train.csv \
-    --testdata=github-test.csv \
+    --traindata=incivility-train-data.csv \
+    --testdata=incivility-test-data.csv \
     --col=label
 ```
 
@@ -246,8 +250,8 @@ Since fine-tuning takes more time, you can directly use my fine-tuned models. Ru
 python 2_codebert-classification.py \
     --epoch 100 \
     --model fine_tuned_code_bert_less_data \
-    --traindata=github-train.csv \
-    --testdata=github-test.csv \
+    --traindata=incivility-train-data.csv \
+    --testdata=incivility-test-data.csv \
     --col=label
 ```
 
@@ -256,8 +260,8 @@ python 2_codebert-classification.py \
 python 2_codebert-classification.py \
     --epoch 100 \
     --model 3_fine_tuned_code_bert \
-    --traindata=github-train.csv \
-    --testdata=github-test.csv \
+    --traindata=incivility-train-data.csv \
+    --testdata=incivility-test-data.csv \
     --col=label
 ```
 
