@@ -1,8 +1,4 @@
 # README
-## Team Information: 
-Student Name: **Abdus Satter** \
-Selected Paper: "Shedding Light on Software Engineering-specific Metaphors and Idioms." Proceedings of the IEEE/ACM 46th International Conference on Software Engineering. 2024. \
-Course: Fall 2024 CS291A: Neural Information Retrieval 
 
 ## Overview
 This project provides a pipeline for emotion and incivility classification using a fine-tuned BERT and CodeBert model. The model can classify text data into specific emotional categories (e.g., Anger, Joy, Sadness, etc.) and incivility categories (Civil, Uncivil) by leveraging pre-trained language representations from BERT and CodeBERT, and fine-tuning them on labeled datasets.
